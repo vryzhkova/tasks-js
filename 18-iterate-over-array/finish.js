@@ -5,3 +5,8 @@
  * 2. Используя один из методов массивов, переберите все элементы
  * и выведите каждый элемент в консоль
  */
+
+ const arr = ['Vika', 25, true];
+
+ arr.forEach(el => console.log(el));
+ arr.map(el => console.log(el))

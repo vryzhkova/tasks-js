@@ -12,3 +12,18 @@
  *
  * 5. Выведите в консоль значение второй переменной
  */
+
+const str = 'I like JavaScrtipt';
+
+console.log(str instanceof String);
+console.log(typeof(str));
+
+const strUpperCase = str.toUpperCase();
+console.log(strUpperCase);
+
+// Создание экземпляра
+
+// const myString = new String('Vika');
+// console.log(myString instanceof String);
+// console.log(typeof myString);
+// console.log(myString.toUpperCase());

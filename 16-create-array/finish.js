@@ -6,3 +6,8 @@
  *
  * 3. Выведите в консоль длину массива
  */
+
+const arr = ['Vika', 25, true];
+
+console.log(arr[0]);
+console.log(arr.length);

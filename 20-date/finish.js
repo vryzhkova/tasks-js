@@ -4,3 +4,8 @@
  *
  * 2. Выведите значение в консоль
  */
+
+ const now = new Date();
+ console.log(now);
+ const nowInMs = now.getTime();
+console.log(nowInMs);

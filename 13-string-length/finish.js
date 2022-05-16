@@ -4,3 +4,7 @@
  *
  * 2. Виведите в консоль длину этой строки
  */
+
+const str = 'I like JavaScript';
+
+console.log(str.length);
