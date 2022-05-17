@@ -3,4 +3,14 @@
  * Что будет выведено в консоль?
  */
 
-console.log(3 || (true && null) || false)
+console.log(3 || (true && null) || false);
+
+//  Ответ: 3
+
+// (true && null) --> null
+// (3 || null) --> 3
+// (3 || false) --> 3
+
+console.log(3 || true && null || false);
+
+// Ответ: 3;
