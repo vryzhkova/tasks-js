@@ -16,6 +16,42 @@ const b = [4, 10, 14, 25, 25, 50]
 const c = [150, 132, 80, 40]
 const d = [15, 26, 10, 23, 85]
 
+
+// Мое решение
+// const arraySortInfo = (inputArray) => {
+//     let result = '';
+//         for(let i = 0; i < inputArray.length - 1; i++) {
+//             if(typeof inputArray[i] !== 'number') {
+//                 result = 'Некоторые элементы не являются числами';
+//             } 
+//             if(inputArray[i] < inputArray[i + 1]) {
+//                 result = 'Массив отсортирован по возрастанию';
+//             }
+//             if(inputArray[i] > inputArray[i + 1]) {
+//                 result = 'Массив отсортирован по убыванию';
+//             } else  {
+//                 result = 'Массив не отсортирован';
+//             }
+//         }
+//         return result;
+// };
+
+// Решение учителя
+
+const arraySortInfo = (inputArray) => {
+    if(inputArray.some((element) => typeof element !== 'number')) {
+        return 'Некоторые элементы не являются числами';
+    } 
+
+    if (inputArray.every((element, index) => index > 0 ? element >= inputArray[index - 1] : true)) {
+        return 'Массив отсортирован по возрастанию';
+    }
+    if (inputArray.every((element, index) => index > 0 ? element <= inputArray[index - 1] : true)) {
+        return 'Массив отсортирован по убыванию';
+    }
+    return 'Массив не отсортирован';
+}
+
 console.log(arraySortInfo(a)) // Некоторые элементы не являются числами
 console.log(arraySortInfo(b)) // Массив отсортирован по возрастанию
 console.log(arraySortInfo(c)) // Массив отсортирован по убыванию
