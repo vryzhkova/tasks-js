@@ -27,7 +27,6 @@ const findPostById = (id, posts) => {
     }
 }
 
-
 // 2 способ
 
 // const findPostById = (id, arr) => {

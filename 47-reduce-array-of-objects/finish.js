@@ -6,6 +6,25 @@
  * у которых количество комментариев не меньше "minimalComentsQty"
  */
 
+// 1 способ
+
+// Мое решение
+// const popularPostsIds = (posts, minimalComentsQty) => {
+//  return  posts.reduce((acc, post) => {
+//   if(post.comments > minimalComentsQty) {
+//     acc.push(post.postId)
+//   }
+//    return acc;
+//  }, [])
+// }
+ 
+// 2 способ
+
+const popularPostsIds = (posts, minimalComentsQty) => {
+  return posts.filter((post) => post.comments > minimalComentsQty).map((post) => post.postId);
+ }
+
+
 const inputPosts = [
   {
     title: 'Как быстро выучить JavaScript?',
@@ -23,6 +42,8 @@ const inputPosts = [
     comments: 12,
   },
 ]
+
+console.log(popularPostsIds(inputPosts));
 
 console.log(popularPostsIds(inputPosts, 10)) // [3421, 8135]
 
