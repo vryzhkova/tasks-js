@@ -7,15 +7,28 @@
  * равными сумме всех количеств в каждой категории
  */
 
+// Мое решение
+
+// const quantitiesByCategories = (products) => {
+//   return products.reduce((acc, product, idx) => {
+//     console.log(idx, acc);
+//     if(acc.hasOwnProperty(product.category)) {
+//       acc[product.category] += product.quantity;
+//     } else {
+//       acc[product.category] = product.quantity;
+//     }
+//     return acc;
+//   }, {})
+// }
+
+// Решение учителя
+
 const quantitiesByCategories = (products) => {
-  return products.reduce((acc, product, idx) => {
-    console.log(idx, acc);
-    if(acc.hasOwnProperty(product.category)) {
-      acc[product.category] += product.quantity;
-    } else {
-      acc[product.category] = product.quantity;
-    }
-    return acc;
+  return products.reduce((qtysByCategories, product) => {
+    const { category, quantity } = product;
+
+    qtysByCategories[category] = (qtysByCategories[category] || 0) + quantity;
+    return qtysByCategories;
   }, {})
 }
 
