@@ -17,6 +17,26 @@ let person = {
   cartId: 435,
 }
 
+// Решение учителя ( без оператора delete)
+
+{
+  let _id, processed, gicart
+  ;({  _id, processed, cart, ...person} = person)
+  console.log(_id, processed, cart); // no erors
+}
+
+console.log(person);
+
+// ReferenceError - because they are block-scoped variables
+console.log(_id, processed, cart);
+
+
+// Мое решение
+
+  // delete person._id;
+  // delete person.processed;
+  // delete person.cart;
+
 console.log(person)
 /*
 {
