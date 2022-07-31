@@ -6,7 +6,12 @@
  */
 
 function square(a) {
-  console.log(a * a)
+  if (arguments.length === 0) {
+  //or if (a === undefined) {
+    throw new Error ("Функция 'square' не может быть вызвана без аргумента")
+  } else {
+    console.log(a * a)
+  }
 }
 
 square(10)
