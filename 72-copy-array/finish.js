@@ -6,7 +6,14 @@
 
 const a = [1, 2, 3]
 
-// Напишите код здесь
+// Мое решение
+// const b = [...aп];
+
+// Решение учителя
+//const b = Array.from(a);
+
+// Решение учителя 2
+const b = JSON.parse(JSON.stringify(a)); // идет глубокая копия объекта!!!
 
 b.push('newElement')
 
