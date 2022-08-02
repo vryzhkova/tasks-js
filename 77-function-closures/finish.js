@@ -14,6 +14,24 @@
  *  - changeGreeting
  */
 
+
+// Мое решение
+const createGreeting = () => {
+    let greetingString = "Hey, this is";
+
+    const greet = (name) => `${greetingString} ${name}`;
+
+    const changeGreeting = () => greetingString = "Good Morning from";
+
+    return {
+        greet,
+        changeGreeting,
+    }
+}
+
+// Решение учителя
+
+
 const greeting1 = createGreeting()
 
 console.log(greeting1.greet('Bob'))
