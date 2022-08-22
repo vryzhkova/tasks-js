@@ -16,9 +16,7 @@ const objectWithNumbers = {
   d: 12,
 }
 
-// Создайте функцию здесь
-
-//  My decision
+//  My solution
 // const sumObjectValues = (obj) => {
 //   let result = 0;
 //   const values = Object.values(obj)
@@ -32,7 +30,7 @@ const objectWithNumbers = {
 //     return result;
 // }
 
-//  teacher's decision
+//  teacher's solution
 
 const sumObjectValues = (nums) => {
   let sum = 0;
